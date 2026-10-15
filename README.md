@@ -62,7 +62,7 @@ The demo sends Sign-off's emails to the log: open `storage/logs/laravel.log` to 
 
 ```bash
 git checkout content && git clean -fdq content
-rm -rf storage/sign-off storage/statamic/revisions
+rm -rf storage/sign-off storage/statamic/revisions resources/addons
 php please stache:clear
 php artisan demo:setup
 ```
