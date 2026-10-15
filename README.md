@@ -46,7 +46,7 @@ Everyone's password is `password`:
 | `priya@example.com` | Priya Shah, in the Pricing team | Approve the Flexible Tide price change. |
 | `lee@example.com` | Lee Okafor, in Legal | Compare the Fixed Green 12 prices, then approve them or send them back. |
 | `pat@example.com` | Pat Kowalski, a publisher | Approve and publish Night Saver, and watch it appear on the site. |
-| `admin@example.com` | A super user | Content → Sign-off → History, and `php please sign-off:check`. |
+| `admin@example.com` | A super user | Content → Sign-off → History. Change the steps at Tools → Addons → Sign-off → Settings. Run `php please sign-off:check`. |
 
 `demo:setup` only runs with `APP_ENV=local`. Don't put this demo on a public server as it is: its passwords are in this README.
 
@@ -76,6 +76,7 @@ Submissions are kept in flat files (`storage/sign-off`) by default. To keep them
 | File | What it shows |
 | --- | --- |
 | `config/sign-off.php` | The steps for each collection, with roles, a user group and "publishers" as approvers |
+| Tools → Addons → Sign-off → Settings | The same steps, editable in the Control Panel. Saving them writes `resources/addons/sign-off-statamic.yaml`, which is then used instead of the config file |
 | `resources/users/roles.yaml`, `groups.yaml` | The roles: authors can edit but not publish; Legal and Pricing can only view |
 | `config/statamic/cp.php` | The `sign_off` dashboard widget |
 | `content/collections/*.yaml` | Revisions turned on for each collection |
