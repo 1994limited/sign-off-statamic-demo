@@ -29,7 +29,7 @@ async function settle(page) {
 
 // A browser signed in to the Control Panel as one of the demo people.
 async function as(email, colorScheme = 'light') {
-    const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2, colorScheme });
+    const context = await browser.newContext({ viewport: { width: 1600, height: 1000 }, deviceScaleFactor: 2, colorScheme });
     const page = await context.newPage();
     await page.goto(`${base}/cp/auth/login`);
     await page.waitForTimeout(1200);
@@ -57,7 +57,7 @@ async function compare(page) {
 }
 
 // The site itself: the live price, while a cheaper one waits for sign-off.
-const site = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
+const site = await browser.newPage({ viewport: { width: 1600, height: 1000 }, deviceScaleFactor: 2 });
 await site.goto(`${base}/`);
 await settle(site);
 await site.screenshot({ path: `${out}/site.png` });
