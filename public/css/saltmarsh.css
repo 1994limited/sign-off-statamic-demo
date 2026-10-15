@@ -83,6 +83,13 @@ h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 .section { padding: 1.5rem 1rem; }
 .section-title { margin-top: 1rem; }
 
+.hero-grid { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.1fr 1fr; } }
+.hero-image, .page-image, .prose img { display: block; width: 100%; height: auto; border-radius: 1rem; }
+.hero-image { aspect-ratio: 16 / 10; object-fit: cover; }
+.page-image { aspect-ratio: 16 / 7; object-fit: cover; margin: 0 0 2rem; }
+.prose img { margin: 1.5rem 0; }
+
 /* Tariff cards: the price is the point */
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }

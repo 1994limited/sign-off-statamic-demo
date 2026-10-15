@@ -1,8 +1,13 @@
 <section class="hero">
-    <div class="wrap">
-        <h1>{{ title }}</h1>
-        <p class="lede">{{ intro }}</p>
-        <p><a class="button" href="/tariffs">See our tariffs</a></p>
+    <div class="wrap hero-grid">
+        <div>
+            <h1>{{ title }}</h1>
+            <p class="lede">{{ intro }}</p>
+            <p><a class="button" href="/tariffs">See our tariffs</a></p>
+        </div>
+        {{ hero }}
+            <img class="hero-image" src="{{ url }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}">
+        {{ /hero }}
     </div>
 </section>
 

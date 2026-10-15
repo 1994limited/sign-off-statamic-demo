@@ -75,6 +75,14 @@ await lee.screenshot({ path: `${out}/entry-panel.png` });
 await compare(lee);
 await lee.screenshot({ path: `${out}/compare.png` });
 
+// Lee again: the new homepage photo, side by side.
+await open(lee, 'in_review', 'Energy owned by the people who use it');
+await compare(lee);
+await lee.screenshot({ path: `${out}/compare-images.png` });
+await lee.getByRole('button', { name: /Open breakwater-dusk\.jpg/ }).click();
+await lee.waitForTimeout(1500);
+await lee.screenshot({ path: `${out}/lightbox.png` });
+
 // Alex, who writes: the dashboard, and the page that was sent back.
 const alex = await as('alex@example.com');
 await alex.goto(`${base}/cp/dashboard`);

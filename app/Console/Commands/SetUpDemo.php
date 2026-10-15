@@ -181,11 +181,13 @@ class SetUpDemo extends Command
         $this->at('-1 day 09:10');
         $energy = Entry::make()->collection('pages')->slug('our-energy')->published(false)->data([
             'title' => 'Where our energy comes from',
+            'hero' => 'breakwater-day.jpg',
             'intro' => 'Two turbines, eleven roofs, and a lot of Essex wind.',
             'content' => [
                 $this->heading('Breakwater Farm'),
                 $this->paragraph('Our two turbines have stood at Breakwater Farm since 2016. Between them they make enough electricity for 2,600 homes a year.'),
                 $this->heading('Rooftop solar'),
+                ['type' => 'image', 'attrs' => ['src' => 'asset::assets::school-solar.jpg', 'alt' => 'Solar panels covering a school roof by the estuary']],
                 $this->paragraph('Panels on eleven schools, halls and workshops make another 900 homes’ worth, and the buildings get cheaper electricity in return.'),
                 $this->paragraph('We are the greenest supplier in Essex.'),
             ],
@@ -193,6 +195,12 @@ class SetUpDemo extends Command
         $energy->save();
         $this->signOff->submit($alex, $energy, 'New page for the menu, as discussed');
         $this->step('Alex submits a new page about the turbines');
+
+        // A new photo for the homepage, waiting for Legal.
+        $this->at('-20 hours');
+        $home = $this->change('pages', 'home', $alex, ['hero' => 'breakwater-dusk.jpg']);
+        $this->signOff->submit($alex, $home, 'Autumn photo for the homepage');
+        $this->step('Alex submits a new homepage photo');
 
         // A price change on Flexible Tide, waiting for Pricing.
         $this->at('-3 hours');

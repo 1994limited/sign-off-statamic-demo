@@ -4,6 +4,7 @@ blueprint: page
 title: 'Energy owned by the people who use it'
 intro: 'Saltmarsh Energy is a community co-operative on the Essex coast. Our members own the wind and solar farms that power their homes, and every surplus goes back into the community.'
 template: home
+hero: breakwater-day.jpg
 content:
   -
     type: heading

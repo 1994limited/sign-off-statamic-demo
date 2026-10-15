@@ -15,12 +15,13 @@ An energy supplier has to get its prices and green claims right, so every change
 - **A price cut** on Fixed Green 12, approved by Pricing and waiting for Legal. The site still shows the old price.
 - **A new tariff**, Night Saver, approved by Pricing and Legal, waiting for the Publisher.
 - **A price change** on Flexible Tide, waiting for Pricing.
-- **A new page** about the turbines, waiting for Legal. It doesn't exist on the site yet.
+- **A new page** about the turbines, with photos, waiting for Legal. It doesn't exist on the site yet.
+- **A new homepage photo**, waiting for Legal. Compare changes shows the old and new photos side by side.
 - **A page sent back** by Legal, with the reason, which the author has fixed but not submitted again. Compare it with what was submitted before.
 - **A news story** signed off last week.
 - **An urgent fix** to a deadline, published by the admin without sign-off, and recorded.
 
-Every place, person, price and claim is invented.
+Every place, person, price and claim is invented, and the illustrations in `public/assets` were drawn for the demo.
 
 ## Running it
 
@@ -44,7 +45,7 @@ Everyone's password is `password`:
 | --- | --- | --- |
 | `alex@example.com` | Alex Morgan, who writes the website | The dashboard: what was sent back, and what's in review. Submit "Switching to us" again. |
 | `priya@example.com` | Priya Shah, in the Pricing team | Approve the Flexible Tide price change. |
-| `lee@example.com` | Lee Okafor, in Legal | Compare the Fixed Green 12 prices, then approve them or send them back. |
+| `lee@example.com` | Lee Okafor, in Legal | Compare the Fixed Green 12 prices, then approve them or send them back. Open the homepage, compare it, and click a photo. |
 | `pat@example.com` | Pat Kowalski, a publisher | Approve and publish Night Saver, and watch it appear on the site. |
 | `admin@example.com` | A super user | Content → Sign-off → History. Change the steps at Tools → Addons → Sign-off → Settings. Run `php please sign-off:check`. |
 

@@ -12,6 +12,13 @@ tabs:
               required: true
               display: Title
           -
+            handle: image
+            field:
+              type: assets
+              display: Image
+              container: assets
+              max_files: 1
+          -
             handle: intro
             field:
               type: textarea
@@ -21,7 +28,8 @@ tabs:
             field:
               type: bard
               display: Content
-              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote]
+              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote, image]
+              container: assets
   sidebar:
     display: Sidebar
     sections:

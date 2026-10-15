@@ -12,6 +12,14 @@ tabs:
               required: true
               display: Title
           -
+            handle: hero
+            field:
+              type: assets
+              display: 'Hero image'
+              container: assets
+              max_files: 1
+              instructions: 'Shown at the top of the page. Set its alt text in the asset.'
+          -
             handle: intro
             field:
               type: textarea
@@ -22,7 +30,8 @@ tabs:
             field:
               type: bard
               display: Content
-              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote]
+              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote, image]
+              container: assets
               sets:
                 main:
                   display: Blocks

@@ -3,6 +3,7 @@ id: 2108a007-dc0c-4644-85c8-24cb08284711
 blueprint: page
 title: 'Who we are'
 intro: 'Started in 2014 by twelve neighbours with a shared field and a grant application.'
+hero: estuary-members.jpg
 content:
   -
     type: paragraph
