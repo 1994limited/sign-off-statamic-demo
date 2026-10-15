@@ -76,7 +76,12 @@ class SetUpDemo extends Command
 
         foreach ($people as [$email, $name, $job, $roles, $groups]) {
             $user = User::findByEmail($email) ?? User::make()->email($email);
-            $user->set('name', $name)->password('password')->explicitRoles($roles)->groups($groups)->makeSuper($email === 'admin@example.com')->save();
+            $user->set('name', $name)->password('password')->explicitRoles($roles)->groups($groups);
+
+            // makeSuper() takes no argument: it always makes a super user.
+            $email === 'admin@example.com' ? $user->makeSuper() : $user->remove('super');
+
+            $user->save();
             $rows[] = [$email, $name, $job];
         }
 
@@ -104,11 +109,11 @@ class SetUpDemo extends Command
         ]);
         $story->save();
         $this->signOff->submit($alex, $story, 'For Monday morning, please');
-        $this->step("Alex submits a news story");
+        $this->step('Alex submits a news story');
 
         $this->at('-5 days 09:02');
         $this->signOff->approve($pat, $story, 'Lovely. Published.');
-        $this->step('Pat approves it, and it’s published');
+        $this->step('Pat approves the news story, and it’s published');
 
         // The switching page, sent back by Legal.
         $this->at('-4 days 14:40');
@@ -120,13 +125,13 @@ class SetUpDemo extends Command
 
         $this->at('-3 days 11:20');
         $this->signOff->reject($lee, $switching, 'The 21 days isn’t ours to guarantee: it depends on the old supplier. Please say “usually within 21 days” instead.');
-        $this->step('Lee sends it back');
+        $this->step('Lee sends “Switching to us” back, with a reason');
 
         $this->at('-2 days 16:05');
         $this->change('pages', 'switching', $alex, [
             'content' => $this->replaceText(Entry::query()->where('collection', 'pages')->where('slug', 'switching')->first()->fromWorkingCopy()->get('content'), 'Your switch is guaranteed to complete within 21 days.', 'Your switch usually completes within 21 days.'),
         ]);
-        $this->step('Alex makes the change, but hasn’t submitted it again yet');
+        $this->step('Alex fixes “Switching to us”, but hasn’t submitted it again yet');
 
         // A price cut on Fixed Green 12, waiting for Legal.
         $this->at('-3 days 09:30');
@@ -140,7 +145,7 @@ class SetUpDemo extends Command
 
         $this->at('-2 days 15:12');
         $this->signOff->approve($priya, $fixed, 'Matches the model. Standing charge checked against Ofgem’s cap.');
-        $this->step('Priya approves the prices; it waits for Lee');
+        $this->step('Priya approves the Fixed Green 12 prices; they wait for Lee');
 
         // The community fund deadline, fixed in a hurry.
         $this->at('-2 days 08:47');
@@ -170,7 +175,7 @@ class SetUpDemo extends Command
         $this->signOff->approve($priya, $night, 'Night rate agreed with the board.');
         $this->at('-1 day 15:45');
         $this->signOff->approve($lee, $night, 'Fine. The “cheaper” claim is fair: the night rate is less than half the day rate.');
-        $this->step('Priya and Lee approve it; it waits for Pat');
+        $this->step('Priya and Lee approve Night Saver; it waits for Pat');
 
         // A new page, waiting for Legal.
         $this->at('-1 day 09:10');

@@ -61,7 +61,7 @@ The demo sends Sign-off's emails to the log: open `storage/logs/laravel.log` to 
 `demo:setup` changes the content, so to start again, put it back and clear the history:
 
 ```bash
-git checkout content
+git checkout content && git clean -fdq content
 rm -rf storage/sign-off storage/statamic/revisions
 php please stache:clear
 php artisan demo:setup
