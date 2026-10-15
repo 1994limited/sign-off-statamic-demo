@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "1994/sign-off-statamic",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1994limited/sign-off-statamic.git",
-                "reference": "160cd5f85704478778fe6974b9a9a6bb0fa906de"
+                "reference": "fba57ddd80b7ee03e804c4b0bea0cfbe10557854"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1994limited/sign-off-statamic/zipball/160cd5f85704478778fe6974b9a9a6bb0fa906de",
-                "reference": "160cd5f85704478778fe6974b9a9a6bb0fa906de",
+                "url": "https://api.github.com/repos/1994limited/sign-off-statamic/zipball/fba57ddd80b7ee03e804c4b0bea0cfbe10557854",
+                "reference": "fba57ddd80b7ee03e804c4b0bea0cfbe10557854",
                 "shasum": ""
             },
             "require": {
@@ -71,9 +71,9 @@
             "support": {
                 "email": "hello@1994.co.uk",
                 "issues": "https://github.com/1994limited/sign-off-statamic/issues",
-                "source": "https://github.com/1994limited/sign-off-statamic/tree/v1.1.0"
+                "source": "https://github.com/1994limited/sign-off-statamic/tree/v1.2.0"
             },
-            "time": "2026-10-15T15:40:03+00:00"
+            "time": "2026-10-15T15:55:03+00:00"
         },
         {
             "name": "ajthinking/archetype",
