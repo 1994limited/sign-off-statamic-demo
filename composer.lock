@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6a8566b80b0fcaaeecf65a0cd16b557",
+    "content-hash": "dc4ba5c8e3af0a7b31f1b90d9ac5db87",
     "packages": [
         {
             "name": "1994/sign-off-statamic",
-            "version": "dev-main",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/1994limited/sign-off-statamic.git",
+                "reference": "d657f7690fe07343b005765fe3750ce7d77d045a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../sign-off-statamic",
-                "reference": "ab97c13985f9d68e157eb8db2f8044419bcff561"
+                "type": "zip",
+                "url": "https://api.github.com/repos/1994limited/sign-off-statamic/zipball/d657f7690fe07343b005765fe3750ce7d77d045a",
+                "reference": "d657f7690fe07343b005765fe3750ce7d77d045a",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.3",
@@ -25,16 +31,16 @@
             },
             "type": "statamic-addon",
             "extra": {
-                "statamic": {
-                    "name": "Sign-off",
-                    "description": "Multi-step editorial sign-off for Statamic Pro. Nothing goes live until everyone has signed off.",
-                    "developer": "1994",
-                    "developer-url": "https://1994.co.uk"
-                },
                 "laravel": {
                     "providers": [
                         "NineteenNinetyFour\\SignOff\\ServiceProvider"
                     ]
+                },
+                "statamic": {
+                    "name": "Sign-off",
+                    "developer": "1994",
+                    "description": "Multi-step editorial sign-off for Statamic Pro. Nothing goes live until everyone has signed off.",
+                    "developer-url": "https://1994.co.uk"
                 }
             },
             "autoload": {
@@ -42,11 +48,7 @@
                     "NineteenNinetyFour\\SignOff\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "NineteenNinetyFour\\SignOff\\Tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -67,12 +69,11 @@
                 "workflow"
             ],
             "support": {
-                "email": "hello@1994.co.uk"
+                "email": "hello@1994.co.uk",
+                "issues": "https://github.com/1994limited/sign-off-statamic/issues",
+                "source": "https://github.com/1994limited/sign-off-statamic/tree/v1.0.0"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2026-10-15T15:20:47+00:00"
         },
         {
             "name": "ajthinking/archetype",
@@ -12263,9 +12264,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "1994/sign-off-statamic": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

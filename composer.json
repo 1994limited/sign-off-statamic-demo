@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.3",
-        "1994/sign-off-statamic": "@dev",
+        "1994/sign-off-statamic": "^1.0",
         "laravel/framework": "^13.17",
         "laravel/tinker": "^3.0",
         "statamic/cms": "^6.0"
@@ -94,13 +94,5 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true,
-    "repositories": [{
-        "name": "sign-off",
-        "type": "path",
-        "url": "../sign-off-statamic",
-        "options": {
-            "symlink": true
-        }
-    }]
+    "prefer-stable": true
 }
