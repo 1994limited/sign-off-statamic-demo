@@ -1,0 +1,50 @@
+author:
+  title: Author
+  permissions:
+    - 'access cp'
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'create pages entries'
+    - 'edit other authors pages entries'
+    - 'view tariffs entries'
+    - 'edit tariffs entries'
+    - 'create tariffs entries'
+    - 'edit other authors tariffs entries'
+    - 'view news entries'
+    - 'edit news entries'
+    - 'create news entries'
+    - 'edit other authors news entries'
+legal:
+  title: Legal
+  permissions:
+    - 'access cp'
+    - 'view pages entries'
+    - 'view tariffs entries'
+    - 'view news entries'
+pricing:
+  title: Pricing
+  permissions:
+    - 'access cp'
+    - 'view tariffs entries'
+publisher:
+  title: Publisher
+  permissions:
+    - 'access cp'
+    - 'view pages entries'
+    - 'edit pages entries'
+    - 'create pages entries'
+    - 'edit other authors pages entries'
+    - 'publish pages entries'
+    - 'publish other authors pages entries'
+    - 'view tariffs entries'
+    - 'edit tariffs entries'
+    - 'create tariffs entries'
+    - 'edit other authors tariffs entries'
+    - 'publish tariffs entries'
+    - 'publish other authors tariffs entries'
+    - 'view news entries'
+    - 'edit news entries'
+    - 'create news entries'
+    - 'edit other authors news entries'
+    - 'publish news entries'
+    - 'publish other authors news entries'

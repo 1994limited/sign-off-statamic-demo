@@ -1,0 +1,39 @@
+title: Article
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: intro
+            field:
+              type: textarea
+              display: Introduction
+          -
+            handle: content
+            field:
+              type: bard
+              display: Content
+              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote]
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              display: Date

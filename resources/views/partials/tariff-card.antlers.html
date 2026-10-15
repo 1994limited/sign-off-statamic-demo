@@ -1,0 +1,7 @@
+<article class="card">
+    <p class="card-kind">{{ contract:label }}{{ if length }} · {{ length }}{{ /if }}</p>
+    <h3><a href="{{ url }}">{{ title }}</a></h3>
+    <p class="rate"><span class="rate-figure">{{ unit_rate }}</span><span class="rate-unit">p per kWh</span></p>
+    <p class="card-summary">{{ summary }}</p>
+    <p class="card-small">Standing charge {{ standing_charge }}p a day</p>
+</article>

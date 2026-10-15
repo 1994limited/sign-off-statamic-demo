@@ -1,0 +1,10 @@
+title: News
+template: news/show
+mount: 96b6782d-76c9-4470-a32a-d978cbb1f8fc
+revisions: true
+route: '/news/{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private

@@ -1,0 +1,11 @@
+<div class="wrap page">
+    <header class="page-header">
+        <h1>{{ title }}</h1>
+        <p class="lede">{{ intro }}</p>
+    </header>
+    <ul class="news-list">
+        {{ collection:news }}
+            {{ partial:news-item }}
+        {{ /collection:news }}
+    </ul>
+</div>

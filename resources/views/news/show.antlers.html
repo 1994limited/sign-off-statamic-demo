@@ -1,0 +1,10 @@
+<article class="wrap page">
+    <p class="card-kind"><a href="/news">News</a> · <time datetime="{{ date format='Y-m-d' }}">{{ date format='j F Y' }}</time></p>
+    <header class="page-header">
+        <h1>{{ title }}</h1>
+        {{ if intro }}<p class="lede">{{ intro }}</p>{{ /if }}
+    </header>
+    <div class="prose">
+        {{ partial:bard }}
+    </div>
+</article>

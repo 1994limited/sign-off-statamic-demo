@@ -1,0 +1,31 @@
+<section class="hero">
+    <div class="wrap">
+        <h1>{{ title }}</h1>
+        <p class="lede">{{ intro }}</p>
+        <p><a class="button" href="/tariffs">See our tariffs</a></p>
+    </div>
+</section>
+
+<section class="wrap section">
+    <h2 class="section-title">Our tariffs</h2>
+    <div class="cards">
+        {{ collection:tariffs }}
+            {{ partial:tariff-card }}
+        {{ /collection:tariffs }}
+    </div>
+</section>
+
+<section class="wrap section">
+    <div class="prose">
+        {{ partial:bard }}
+    </div>
+</section>
+
+<section class="wrap section">
+    <h2 class="section-title">Latest news</h2>
+    <ul class="news-list">
+        {{ collection:news limit="3" }}
+            {{ partial:news-item }}
+        {{ /collection:news }}
+    </ul>
+</section>

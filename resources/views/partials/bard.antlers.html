@@ -1,0 +1,7 @@
+{{ content }}
+    {{ if type == 'text' }}
+        {{ text }}
+    {{ elseif type == 'callout' }}
+        <aside class="callout"><p>{{ text }}</p></aside>
+    {{ /if }}
+{{ /content }}

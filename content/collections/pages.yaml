@@ -1,0 +1,6 @@
+title: Pages
+template: page
+structure:
+  root: true
+route: '{parent_uri}/{slug}'
+revisions: true

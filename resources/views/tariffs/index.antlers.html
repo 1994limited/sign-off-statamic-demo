@@ -1,0 +1,12 @@
+<div class="wrap page">
+    <header class="page-header">
+        <h1>{{ title }}</h1>
+        <p class="lede">{{ intro }}</p>
+    </header>
+    <div class="cards">
+        {{ collection:tariffs }}
+            {{ partial:tariff-card }}
+        {{ /collection:tariffs }}
+    </div>
+    <p class="note">Prices include VAT, for a typical home paying by Direct Debit in the East of England.</p>
+</div>

@@ -1,0 +1,57 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: intro
+            field:
+              type: textarea
+              display: Introduction
+              instructions: 'One or two sentences under the title.'
+          -
+            handle: content
+            field:
+              type: bard
+              display: Content
+              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, anchor, quote]
+              sets:
+                main:
+                  display: Blocks
+                  sets:
+                    callout:
+                      display: Callout
+                      icon: alert-triangle
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: textarea
+                            display: Text
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections: [pages]
+              max_items: 1
+              listable: false
+              localizable: true

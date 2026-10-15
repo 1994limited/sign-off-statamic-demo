@@ -1,0 +1,8 @@
+title: Tariffs
+template: tariffs/show
+mount: 4db460ae-9ecc-477f-9f3d-b6a70d3c887f
+revisions: true
+route: '/tariffs/{slug}'
+structure:
+  root: false
+  max_depth: 1

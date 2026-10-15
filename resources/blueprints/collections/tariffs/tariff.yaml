@@ -1,0 +1,74 @@
+title: Tariff
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Tariff
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Name
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: Summary
+          -
+            handle: contract
+            field:
+              type: button_group
+              display: Contract
+              options:
+                fixed: 'Fixed price'
+                variable: 'Variable price'
+              default: fixed
+          -
+            handle: length
+            field:
+              type: text
+              display: 'Contract length'
+              width: 50
+          -
+            handle: exit_fee
+            field:
+              type: text
+              display: 'Exit fee'
+              width: 50
+      -
+        display: Prices
+        instructions: 'Including VAT, for a typical home paying by Direct Debit.'
+        fields:
+          -
+            handle: unit_rate
+            field:
+              type: text
+              display: 'Unit rate'
+              append: 'p per kWh'
+              width: 50
+          -
+            handle: standing_charge
+            field:
+              type: text
+              display: 'Standing charge'
+              append: 'p per day'
+              width: 50
+          -
+            handle: green_claim
+            field:
+              type: textarea
+              display: 'Where the energy comes from'
+              instructions: 'Green claims are checked by Legal against the fuel mix disclosure.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              validate: 'max:200'
