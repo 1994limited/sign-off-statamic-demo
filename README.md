@@ -87,15 +87,14 @@ Submissions are kept in flat files (`storage/sign-off`) by default. To keep them
 
 ## Screenshots
 
-`scripts/screenshots.mjs` signs in as each person and captures the pages used in Sign-off's docs at 2×. Start from a fresh demo, after `demo:setup`:
+The screenshots in Sign-off's docs are taken by the script in [`sign-off/tools`](https://github.com/1994limited/statamic-marketplace/tree/main/sign-off/tools) of the statamic-marketplace repo, which signs in as each person and captures the pages at 2×. Start from a fresh demo, after `demo:setup`, then from that folder:
 
 ```bash
-cd scripts
 npm install
 DEMO_URL=http://localhost:8000 npm run screenshots
 ```
 
-They're written to `scripts/screenshots/`. It drives Google Chrome on macOS by default; set `CHROME` to the path of another Chrome or Chromium.
+They're written to `screenshots/` beside the script. It drives Google Chrome on macOS by default; set `CHROME` to the path of another Chrome or Chromium.
 
 ## Licence
 
